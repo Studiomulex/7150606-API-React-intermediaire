@@ -14,4 +14,4 @@ const jobsDefinitionData = {
 	mobile: `Les développeurs mobile conçoivent des applications mobiles en natif (et non simplement en JavaScript)`
 }
 
-module.exports = { jobAnswersData, jobsDefinitionData }
+export default { jobAnswersData, jobsDefinitionData }

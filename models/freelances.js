@@ -112,4 +112,4 @@ const freelances = [
 	
 ]
 
-module.exports = freelances
+export default freelances
