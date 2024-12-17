@@ -1,9 +1,9 @@
-const express = require('express')
-const router = express.Router()
-const getSurvey = require('../controllers/survey')
-const getFreelances = require('../controllers/freelances')
-const getFreelance = require('../controllers/freelance')
-const getResults = require('../controllers/results')
+import { Router } from 'express'
+const router = Router()
+import getSurvey from '../controllers/survey'
+import getFreelances from '../controllers/freelances'
+import getFreelance from '../controllers/freelance'
+import getResults from '../controllers/results'
 
 router.get('/survey', function (req, res) {
 	const surveyData = getSurvey()
@@ -34,14 +34,14 @@ router.get('/results', function (req, res) {
 	}
 })
 
-router.get('/freelances', function (req, res, next) {
+router.get('/freelances', function (req, res) {
 	const freelancersList = getFreelances()
 	res.send({ freelancersList })
 })
 
 
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
 	res.render('index', { title: 'API - React intermédiaire' })
 })
 
-module.exports = router
+export default router
