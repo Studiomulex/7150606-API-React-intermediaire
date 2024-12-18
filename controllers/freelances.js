@@ -1,7 +1,7 @@
-const freelancesData = require('../models/freelances')
+import { map } from '../models/freelances'
 
 function getFreelances() {
-	return freelancesData.map(({ id, name, job, picture }) => ({
+	return map(({ id, name, job, picture }) => ({
 		id,
 		name, 
 		job, 
@@ -9,4 +9,4 @@ function getFreelances() {
 	}))
 }
 
-module.exports = getFreelances
+export default getFreelances

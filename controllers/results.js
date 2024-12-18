@@ -1,4 +1,4 @@
-const { jobAnswersData, jobsDefinitionData } = require('../models/results')
+import { jobAnswersData, jobsDefinitionData } from '../models/results'
 
 function getResults(a1, a2, a3, a4, a5, a6) {
 
@@ -29,4 +29,4 @@ function getResults(a1, a2, a3, a4, a5, a6) {
 	}))
 }
 
-module.exports = getResults
+export default getResults

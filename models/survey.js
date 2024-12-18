@@ -7,4 +7,4 @@ const survey = {
 	6: `Avez-vous prévu une version mobile à part entière ?`
 }
 
-module.exports = survey
+export default survey

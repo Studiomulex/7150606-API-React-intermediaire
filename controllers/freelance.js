@@ -1,7 +1,7 @@
-const freelancesData = require('../models/freelances')
+import { find } from '../models/freelances'
 
 function getFreelance(id) {
-	return freelancesData.find((freelancer => freelancer.id === id))
+	return find((freelancer => freelancer.id === id))
 }
 
-module.exports = getFreelance
+export default getFreelance
