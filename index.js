@@ -4,21 +4,21 @@
  * Module dependencies.
  */
 
-var app = require('./app')
-var http = require('http')
+import app, { set } from './app'
+import { createServer } from 'http'
 
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '8000')
-app.set('port', port)
+set('port', port)
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app)
+var server = createServer(app)
 
 /**
  * Listen on provided port, on all network interfaces.
