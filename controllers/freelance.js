@@ -1,7 +1,7 @@
-import { find } from '../models/freelances'
+import freelancers from '../models/freelances'
 
 function getFreelance(id) {
-	return find((freelancer => freelancer.id === id))
+	return freelancers.find(freelancer => freelancer.id === id)
 }
 
 export default getFreelance

@@ -2,18 +2,21 @@ import createError from 'http-errors'
 import express, { json, urlencoded} from 'express'
 import { join } from 'path'
 import cookieParser from 'cookie-parser'
-import logger from 'morgan'
 import indexRouter from './routes/index'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 const app = express()
 
 import cors from 'cors'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 app.use(cors())
 // view engine setup
 app.set('views', join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-app.use(logger('dev'))
+app.use(express.static(join(__dirname, 'public')))
 app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
@@ -31,7 +34,7 @@ app.use(function (req, res, next) {
 })
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
 	// set locals, only providing error in development
 	res.locals.message = err.message
 	res.locals.error = req.app.get('env') === 'development' ? err : {}

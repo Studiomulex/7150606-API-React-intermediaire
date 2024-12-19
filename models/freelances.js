@@ -112,4 +112,4 @@ const freelances = [
 	
 ]
 
-export default freelances
+export default freelances;

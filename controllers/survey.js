@@ -1,8 +1,7 @@
 import surveyData from '../models/survey'
 
-function getSurvey() {
-	// return surveyData[questionNumber]
-	return surveyData
+function getSurvey(questionNumber) {
+	return surveyData[questionNumber];
 }
 
 export default getSurvey

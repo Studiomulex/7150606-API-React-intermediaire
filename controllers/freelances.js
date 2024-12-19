@@ -1,7 +1,7 @@
-import { map } from '../models/freelances'
+import freelances from '../models/freelances'
 
 function getFreelances() {
-	return map(({ id, name, job, picture }) => ({
+	return freelances.map(({ id, name, job, picture }) => ({
 		id,
 		name, 
 		job, 

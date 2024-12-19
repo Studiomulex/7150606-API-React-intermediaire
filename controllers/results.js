@@ -8,7 +8,7 @@ function getResults(a1, a2, a3, a4, a5, a6) {
 	const jobsList = Object.keys(jobAnswersData)
 	
 	const requiredJobsList =  answerNumbers.reduce((prevJobs, answerNumber) => {
-		if (!answers[answerNumber] || answers[answerNumber] === 'false') {
+		if (!answers[answerNumber] || answers[answerNumber] === false) {
 			return prevJobs
 		}
 
